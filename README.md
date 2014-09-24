@@ -22,3 +22,27 @@ This is the real HTTP Test Unit that perform the request and validate the server
 
 If found, it will be run after the _qa.htt_ test, it's made for post HTTP evaluations. Once it exists, the return value is validated.
 
+
+## Status
+
+Status of each unit test
+
+[x] Console
+[x] Cookies
+[ ] Configuration
+[ ] Data
+[ ] File Configuration
+[ ] Events
+[ ] Garbage Collector
+[ ] Memory Handler
+[ ] Global Worker
+[ ] Log Writer
+[ ] Parameters
+[ ] Query String
+[ ] Response
+[ ] Request
+[ ] Router
+[ ] Sessions
+[ ] Workers
+[ ] Time handling
+[ ] Dthread

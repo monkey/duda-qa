@@ -1,4 +1,4 @@
-INCLUDE ../setup/httest.conf
+INCLUDE ../../setup/httest.conf
 
 CLIENT
 _REQ $HOST $PORT

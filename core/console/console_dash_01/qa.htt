@@ -1,0 +1,12 @@
+INCLUDE ../../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/dash $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 301 Moved Permanently"
+_EXPECT . "Content-Length: 0"
+_EXPECT . "Location: "
+_WAIT
+END

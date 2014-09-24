@@ -27,22 +27,28 @@ If found, it will be run after the _qa.htt_ test, it's made for post HTTP evalua
 
 Status of each unit test
 
-[x] Console
-[x] Cookies
-[ ] Configuration
-[ ] Data
-[ ] File Configuration
-[ ] Events
-[ ] Garbage Collector
-[ ] Memory Handler
-[ ] Global Worker
-[ ] Log Writer
-[ ] Parameters
-[ ] Query String
-[ ] Response
-[ ] Request
-[ ] Router
-[ ] Sessions
-[ ] Workers
-[ ] Time handling
-[ ] Dthread
+- [x] Console
+  - [x] dashboard()
+  - [x] debug()
+- [x] Cookies
+  - [x] cmp()
+  - [x] destroy()
+  - [x] get()
+  - [x] set()
+- [ ] Configuration
+- [ ] Data
+- [ ] File Configuration
+- [ ] Events
+- [ ] Garbage Collector
+- [ ] Memory Handler
+- [ ] Global Worker
+- [ ] Log Writer
+- [ ] Parameters
+- [ ] Query String
+- [ ] Response
+- [ ] Request
+- [ ] Router
+- [ ] Sessions
+- [ ] Workers
+- [ ] Time handling
+- [ ] Dthread

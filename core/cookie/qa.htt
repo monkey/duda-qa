@@ -1,0 +1,63 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_AUTO_COOKIE on
+
+# Cookie without expiration
+_REQ $HOST $PORT
+__GET /qa/set_no_expire/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Set-Cookie: unit=test; path=/"
+_WAIT
+
+# Cookie with expiration time
+_REQ $HOST $PORT
+__GET /qa/set_expire/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Set-Cookie: unit=test; path=/; expires="
+_WAIT
+
+# Retrieve a cookie being send
+_REQ $HOST $PORT
+__GET /qa/get/ $HTTPVER
+__Host: $HOST
+__Cookie: AUTO
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "get=0"
+_EXPECT . "len=4"
+_EXPECT . "value=test"
+_WAIT
+
+# Destroy cookie 
+_REQ $HOST $PORT
+__GET /qa/destroy/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Set-Cookie: unit=deleted; path=/; expires=Fri, 12 Sep 1980"
+_WAIT
+
+# Compare cookie OK
+_REQ $HOST $PORT
+__GET /qa/cmp/ $HTTPVER
+__Host: $HOST
+__Cookie: unit=test
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_WAIT
+
+# Compare cookie Fail
+_REQ $HOST $PORT
+__GET /qa/cmp/ $HTTPVER
+__Host: $HOST
+__Cookie: unit=err
+__
+_EXPECT . "HTTP/1.1 500 Internal Server Error"
+_WAIT
+
+END

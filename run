@@ -1,0 +1,159 @@
+#!/usr/bin/env python
+
+import os
+import sys
+import time
+import signal
+import commands
+import subprocess
+
+# List of available Core Unit Tests
+CORE_UT = {'console': ['dashboard_01',
+                       'dashboard_02',
+                       'debug'
+                       ],
+           'cookie': None,
+           'configuration': ['bind_messages',
+                             'service_name',
+                             'service_root'
+                             ],
+            }
+
+# ANSI Colors
+ANSI_BOLD    = "\033[1m"
+ANSI_CYAN    = "\033[36m"
+ANSI_MAGENTA = "\033[35m"
+ANSI_RED     = "\033[31m"
+ANSI_YELLOW  = "\033[33m"
+ANSI_BLUE    = "\033[34m"
+ANSI_GREEN   = "\033[32m"
+ANSI_WHITE   = "\033[37m"
+ANSI_RESET   = "\033[0m"
+
+MSG_TAG_INIT = ANSI_RESET + ANSI_BOLD + '['
+MSG_TAG_END  = ANSI_RESET + ANSI_BOLD + ']' + ANSI_RESET
+MSG_OK       = MSG_TAG_INIT + ANSI_GREEN + 'OK' + MSG_TAG_END
+MSG_FAIL     = MSG_TAG_INIT + ANSI_RED + 'FAILED' + MSG_TAG_END
+MSG_NEW      = '[' + ANSI_YELLOW + '+' + ANSI_RESET + ']'
+MSG_INFO     = '[' + ANSI_GREEN + 'i' + ANSI_RESET + ']'
+
+def dudac_spawn(title, path):
+    if path is not None:
+        cmd = ['dudac', '-w', 'core/%s/%s' % (title, path)]
+    else:
+        cmd = ['dudac', '-w', 'core/%s/' % (title)]
+    try:
+        proc = subprocess.Popen(cmd, bufsize=0, stdout=subprocess.PIPE, stderr=subprocess.PIPE, preexec_fn=os.setsid)
+    except:
+        return None
+
+    http_ping_wait()
+    return proc
+
+def script_ok(msg):
+    print ANSI_GREEN, '       ' + msg, ANSI_RESET
+    sys.stdout.flush()
+
+def script_failed(msg):
+    print ANSI_RED, '       ' + msg, ANSI_RESET
+    sys.stdout.flush()
+
+def script_spawn(cur, cmd):
+    ret = commands.getstatusoutput(cmd)
+    status = os.WEXITSTATUS(ret[0])
+    if status != 0:
+        f = open(cur + '/errors.log', 'w')
+        f.write('===> [%s] - %s <===\n\n' % (cur, cmd))
+        f.write(ret[1])
+        f.close()
+
+    return status
+
+def print_info(msg):
+    print "%s %-25s" % (MSG_INFO, msg)
+    sys.stdout.flush()
+
+def print_sub(header):
+    print "    %s %-10s" % (MSG_NEW, header)
+    sys.stdout.flush()
+
+def http_ping_wait():
+    times = 0
+
+    while times < 100:
+        try:
+            ret = subprocess.call('curl -i http://localhost:2001')
+            if ret == 0:
+                print "PING OK!"
+                return 0
+            else:
+                times += 1
+                continue
+        except:
+            times += 1
+            continue
+
+    return -1
+
+# Evaluate a running service with it test scripts
+def qa_eval(proc, path):
+    pre = None
+    pos = None
+    htt = None
+
+    if os.path.exists(path + '/pre.sh'):
+        pre = 'pre.sh'
+    if os.path.exists(path + '/pos.sh'):
+        pos = 'pos.sh'
+    if os.path.exists(path + '/qa.htt'):
+        htt = 'qa.htt'
+
+    if htt is None:
+        print "Error: missing test"
+        return
+
+    time.sleep(0.2)
+
+    # save curren path
+    cpath = os.getcwd()
+    os.chdir(path)
+
+    if pre is not None:
+        ret = script_spawn(cpath, './pre.sh')
+        if ret == 0:
+            script_ok('PRE_OK')
+        else:
+            script_failed('PRE_FAILED')
+
+    ret = script_spawn(cpath, 'httest ' + htt)
+    if ret == 0:
+        script_ok('HTTP_TEST_OK')
+    else:
+        script_failed('HTTP_TEST_FAILED')
+
+    if pre is not None:
+        ret = script_spawn(cpath, './pos.sh')
+        if ret == 0:
+            script_ok('POS_OK')
+        else:
+            script_failed('POS_FAILED')
+
+    os.chdir(cpath)
+
+# Run the tests
+for section in CORE_UT:
+    print_info(section)
+
+    if CORE_UT[section] is None:
+        print_sub('all')
+        proc = dudac_spawn(section, None)
+        qa_eval(proc, 'core/' + section)
+        os.killpg(proc.pid, signal.SIGTERM)
+    else:
+        i = 0
+        for t in CORE_UT[section]:
+            print_sub(t)
+            proc = dudac_spawn(section, CORE_UT[section][i])
+            qa_eval(proc, 'core/%s/%s' % (section, t))
+            os.killpg(proc.pid, signal.SIGTERM)
+            i += 1

@@ -35,10 +35,10 @@ Status of each unit test
   - [x] destroy()
   - [x] get()
   - [x] set()
-- [ ] Configuration
+- [x] Configuration
   - [x] bind_messages()
   - [x] service_name()
-  - [ ] service_root()
+  - [x] service_root()
 - [ ] Data
   - [ ] get_path()
   - [ ] locate()

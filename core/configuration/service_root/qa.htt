@@ -1,0 +1,11 @@
+INCLUDE ../../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET / $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "X-Duda-QA: OK"
+_WAIT
+END

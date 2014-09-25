@@ -12,6 +12,35 @@ pre.sh   | If found, it will be run as the first thing. This kind of script is m
 qa.htt   | This is the real HTTP Test Unit that perform the request and validate the server response. The script is interpreted by the __httest__ tool. Once it exits, the return value is validated.
 pos.sh   | If found, it will be run after the _qa.htt_ test, it's made for post HTTP evaluations. Once it exists, the return value is validated.
 
+## Usage
+
+The tool assumes you have installed __dudac__ tool in your system:
+
+```bash
+$ pip install dudac
+```
+
+now build [Duda I/O](http://duda.io) stack using __dudac__ and with a simple example
+service:
+
+```bash
+$ dudac -w core/console/debug
+```
+
+then break the service with CTRL-C, the stack have been built and is ready to be used with
+the unit tests. The final step is just to launcht the __run__ Python script:
+
+```bash
+$ ./run
+```
+Optionally if you are using a custom stack on your file system, you can point it through the environment variable _DUDAC\_STAGE_, e.g:
+
+```bash
+$ export DUDAC_STAGE=/home/foo/stack/
+```
+
+note: after set the environment variable, __dudac__ will expect to find a __monkey__ directory
+inside _/home/foo/stack/_.
 
 ## Status
 

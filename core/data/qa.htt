@@ -1,0 +1,24 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/data/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "/duda-qa/core/data/data/"
+_EXPECT . "/duda-qa/core/data/data/something"
+_EXPECT . "new=/tmp/"
+_WAIT
+
+# Check new path
+_REQ $HOST $PORT
+__GET /qa/data/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "current=/tmp/"
+_EXPECT . "locate=/tmp/something"
+_WAIT
+
+END

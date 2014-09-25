@@ -39,10 +39,10 @@ Status of each unit test
   - [x] bind_messages()
   - [x] service_name()
   - [x] service_root()
-- [ ] Data
-  - [ ] get_path()
-  - [ ] locate()
-  - [ ] set_path()
+- [x] Data
+  - [x] get_path()
+  - [x] locate()
+  - [x] set_path()
 - [ ] File Configuration
   - [ ] free_conf()
   - [ ] get_path()

@@ -36,7 +36,7 @@ Status of each unit test
   - [x] get()
   - [x] set()
 - [ ] Configuration
-  - [ ] bind_messages()
+  - [x] bind_messages()
   - [ ] force_redirect()
   - [ ] service_name()
   - [ ] service_root()

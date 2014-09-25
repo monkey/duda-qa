@@ -53,10 +53,27 @@ Status of each unit test
   - [ ] section_key()
   - [ ] set_path()
 - [ ] Events
+  - [ ] add()
+  - [ ] create_signal_fd()
+  - [ ] delete()
+  - [ ] duda_event_signal_set_callback()
+  - [ ] lookup()
+  - [ ] mode()
+  - [ ] signal()
 - [ ] Garbage Collector
+  - [ ] add()
 - [ ] Memory Handler
+  - [ ] alloc()
+  - [ ] alloc_z()
+  - [ ] free()
+  - [ ] realloc()
 - [ ] Global Worker
+  - [ ] get()
+  - [ ] init()
+  - [ ] set()
 - [ ] Log Writer
+  - [ ] duda_logger_create()
+  - [ ] print()
 - [ ] Parameters
 - [ ] Query String
 - [ ] Response

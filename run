@@ -13,10 +13,10 @@ CORE_UT = {'console': ['dashboard_01',
                        'debug'
                        ],
            'cookie': None,
-           'configuration': ['bind_messages',
-                             'service_name',
-                             'service_root'
-                             ],
+           'config': ['bind_messages',
+                      'service_name',
+                      'service_root'
+                  ],
            'data': None
             }
 

@@ -17,7 +17,8 @@ CORE_UT = {'console': ['dashboard_01',
                       'service_name',
                       'service_root'
                   ],
-           'data': None
+           'data': None,
+           'fconf': None
             }
 
 # ANSI Colors

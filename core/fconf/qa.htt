@@ -1,0 +1,24 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/fconf/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "path="
+_EXPECT . "duda-qa/core/fconf/conf/"
+_EXPECT . "file for the Bourne shell"
+_EXPECT . "section_key: name=test_foo"
+_EXPECT . "section_key: code=2"
+_EXPECT . "section_key: code=002"
+_EXPECT . "new_path=/tmp/"
+_EXPECT . "section_key: bool_off=0"
+_EXPECT . "section_key: bool_on=1"
+_EXPECT . "line:val:0=aaa"
+_EXPECT . "line:val:1=bbb"
+_EXPECT . "line:val:2=ccc"
+_EXPECT . "line:val:3=ddd"
+_EXPECT . "line:val:4=eee"
+_WAIT
+END

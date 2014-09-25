@@ -43,14 +43,14 @@ Status of each unit test
   - [x] get_path()
   - [x] locate()
   - [x] set_path()
-- [ ] File Configuration
-  - [ ] free_conf()
-  - [ ] get_path()
-  - [ ] read_conf()
-  - [ ] read_file()
-  - [ ] section_get()
-  - [ ] section_key()
-  - [ ] set_path()
+- [x] File Configuration
+  - [x] free_conf()
+  - [x] get_path()
+  - [x] read_conf()
+  - [x] read_file()
+  - [x] section_get()
+  - [x] section_key()
+  - [x] set_path()
 - [ ] Events
   - [ ] add()
   - [ ] create_signal_fd()

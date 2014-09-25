@@ -18,7 +18,8 @@ CORE_UT = {'console': ['dashboard_01',
                       'service_root'
                   ],
            'data': None,
-           'fconf': None
+           'fconf': None,
+           'event': ['signal_callback']
             }
 
 # ANSI Colors

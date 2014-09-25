@@ -55,10 +55,10 @@ Status of each unit test
   - [ ] add()
   - [ ] create_signal_fd()
   - [ ] delete()
-  - [ ] duda_event_signal_set_callback()
+  - [x] duda_event_signal_set_callback()
   - [ ] lookup()
   - [ ] mode()
-  - [ ] signal()
+  - [x] signal()
 - [ ] Garbage Collector
   - [ ] add()
 - [ ] Memory Handler

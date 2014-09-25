@@ -1,0 +1,19 @@
+INCLUDE ../../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/set_one/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "value=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/val_get/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "value=1"
+_WAIT
+END

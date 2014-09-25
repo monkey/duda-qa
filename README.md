@@ -44,7 +44,7 @@ inside _/home/foo/stack/_.
 
 ## Status
 
-Status of each unit test
+The following list represents the status of each core API objects and it methods available. Unchecked boxes are _work in process_.
 
 - [x] Console
   - [x] dashboard()
@@ -156,3 +156,7 @@ Status of each unit test
   - [ ] running()
   - [ ] status()
   - [ ] yield()
+
+## Contact
+
+Eduardo Silva <eduardo@monkey.io>

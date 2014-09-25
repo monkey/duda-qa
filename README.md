@@ -75,8 +75,32 @@ Status of each unit test
   - [ ] duda_logger_create()
   - [ ] print()
 - [ ] Parameters
+  - [ ] count()
+  - [ ] get()
+  - [ ] get_number()
+  - [ ] len()
 - [ ] Query String
+  - [ ] cmp()
+  - [ ] count()
+  - [ ] get()
+  - [ ] get_id()
 - [ ] Response
+  - [ ] cont()
+  - [ ] end()
+  - [ ] finalize()
+  - [ ] flush()
+  - [ ] headers_off()
+  - [ ] http_content_length()
+  - [ ] http_content_type()
+  - [ ] http_header()
+  - [ ] http_header_n()
+  - [ ] http_status()
+  - [ ] print()
+  - [ ] printf()
+  - [ ] send_headers()
+  - [ ] sendfile()
+  - [ ] sendfile_range()
+  - [ ] wait()
 - [ ] Request
 - [ ] Router
 - [ ] Sessions

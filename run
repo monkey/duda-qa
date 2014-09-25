@@ -81,10 +81,10 @@ def http_ping_wait():
     times = 0
 
     while times < 100:
+        time.sleep(0.1)
         try:
-            ret = subprocess.call('curl -i http://localhost:2001')
+            ret = subprocess.call('curl -i -s -o /dev/null http://localhost:2001', shell=True)
             if ret == 0:
-                print "PING OK!"
                 return 0
             else:
                 times += 1
@@ -111,8 +111,6 @@ def qa_eval(proc, path):
     if htt is None:
         print "Error: missing test"
         return
-
-    time.sleep(0.2)
 
     # save curren path
     cpath = os.getcwd()

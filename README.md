@@ -1,4 +1,4 @@
-# Duda Quality Assurance
+# Duda I/O - Quality Assurance
 
 The following repository is a complete QA test over every API found in the Core Objects of Duda I/O version DST-2.
 
@@ -36,8 +36,22 @@ Status of each unit test
   - [x] get()
   - [x] set()
 - [ ] Configuration
+  - [ ] bind_messages()
+  - [ ] force_redirect()
+  - [ ] service_name()
+  - [ ] service_root()
 - [ ] Data
+  - [ ] get_path()
+  - [ ] locate()
+  - [ ] set_path()
 - [ ] File Configuration
+  - [ ] free_conf()
+  - [ ] get_path()
+  - [ ] read_conf()
+  - [ ] read_file()
+  - [ ] section_get()
+  - [ ] section_key()
+  - [ ] set_path()
 - [ ] Events
 - [ ] Garbage Collector
 - [ ] Memory Handler

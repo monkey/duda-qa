@@ -19,7 +19,9 @@ CORE_UT = {'console': ['dashboard_01',
                   ],
            'data': None,
            'fconf': None,
-           'event': ['signal_callback']
+           'event': ['signal_callback',
+                     'create_signal_fd'
+                 ]
             }
 
 # ANSI Colors

@@ -72,7 +72,7 @@ The following list represents the status of each core API objects and it methods
   - [x] set_path()
 - [ ] Events
   - [ ] add()
-  - [ ] create_signal_fd()
+  - [x] create_signal_fd()
   - [ ] delete()
   - [x] duda_event_signal_set_callback()
   - [ ] lookup()

@@ -1,0 +1,20 @@
+INCLUDE ../../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/send_signal/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "ret=0 signal=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/validate/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check=DEADBEEF"
+_WAIT
+
+END

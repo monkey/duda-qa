@@ -58,12 +58,10 @@ The following list represents the status of each core API objects and it methods
  :white_check_mark:  |                   | bind_messages | bind_messages | Write message to stdout and stderr, validate console file |
  :white_check_mark:  |                   | service_name  | service_name  | Alter service name and validate new service URL |
  :white_check_mark:  |                   | service_root  | service_root  | Make the service the owner of the server, check new URL |
+ :white_check_mark:  | Data              |               |               |                       |
+ :white_check_mark:  |                   | ALL           | get_path, locate, set_path | Locate file path, override Data path and compose new one |
 
 
-- [x] Data
-  - [x] get_path()
-  - [x] locate()
-  - [x] set_path()
 - [x] File Configuration
   - [x] free_conf()
   - [x] get_path()

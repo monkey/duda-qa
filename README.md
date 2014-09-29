@@ -82,49 +82,50 @@ The following list represents the status of each core API objects and it methods
                      |                    | :no_entry:         | lookup            |
                      |                    | :no_entry:         | mode              |
                      |                    | :white_check_mark: | signal            | event/signal_callback/
- :warning:           | Garbage Collector  |                    |                   |
+ :no_entry:          | Garbage Collector  |                    |                   |
                      |                    | :no_entry:         | add               |
- :warning:           | Memory Handler     |                    |                   |
+ :no_entry:          | Memory Handler     |                    |                   |
                      |                    | :no_entry:         | alloc             |
                      |                    | :no_entry:         | alloc_z           |
                      |                    | :no_entry:         | free              |
                      |                    | :no_entry:         | realloc           |
- :warning:           | Global Worker      |                    |                   |
+ :no_entry:          | Global Worker      |                    |                   |
                      |                    | :no_entry:         | get               |
                      |                    | :no_entry:         | init              |
                      |                    | :no_entry:         | set               |
- :warning:           | Log Writer         |                    |                   |
+ :no_entry:          | Log Writer         |                    |                   |
                      |                    | :no_entry:         | duda_loogger_create |
                      |                    | :no_entry:         | print             |
- :warning:           | Parameters         |                    |                   |
+ :no_entry:          | Parameters         |                    |                   |
                      |                    | :no_entry:         | count             |
                      |                    | :no_entry:         | get               |
                      |                    | :no_entry:         | get_number        |
                      |                    | :no_entry:         | len               |
+ :no_entry:          | Query String       |                    |                   |
+                     |                    | :no_entry:         | cmp               |
+                     |                    | :no_entry:         | count             |
+                     |                    | :no_entry:         | get               |
+                     |                    | :no_entry:         | get_id            |
+ :no_entry:          | Response           |                    |                   |
+                     |                    | :no_entry:         | cont              |
+                     |                    | :no_entry:         | end               |
+                     |                    | :no_entry:         | finalize          |
+                     |                    | :no_entry:         | flush             |
+                     |                    | :no_entry:         | headers_off       |
+                     |                    | :no_entry:         | http_content_length |
+                     |                    | :no_entry:         | http_content_type   |
+                     |                    | :no_entry:         | http_header       |
+                     |                    | :no_entry:         | http_header_n     |
+                     |                    | :no_entry:         | http_status       |
+                     |                    | :no_entry:         | get               |
+                     |                    | :no_entry:         | print             |
+                     |                    | :no_entry:         | printf            |
+                     |                    | :no_entry:         | send_headers      |
+                     |                    | :no_entry:         | sendfile          |
+                     |                    | :no_entry:         | sendfile_range    |
+                     |                    | :no_entry:         | wait              |
 
 
-- [ ] Query String
-  - [ ] cmp()
-  - [ ] count()
-  - [ ] get()
-  - [ ] get_id()
-- [ ] Response
-  - [ ] cont()
-  - [ ] end()
-  - [ ] finalize()
-  - [ ] flush()
-  - [ ] headers_off()
-  - [ ] http_content_length()
-  - [ ] http_content_type()
-  - [ ] http_header()
-  - [ ] http_header_n()
-  - [ ] http_status()
-  - [ ] print()
-  - [ ] printf()
-  - [ ] send_headers()
-  - [ ] sendfile()
-  - [ ] sendfile_range()
-  - [ ] wait()
 - [ ] Request
   - [ ] content_length()
   - [ ] content_type()

@@ -46,10 +46,10 @@ inside _/home/foo/stack/_.
 
 The following list represents the status of each core API objects and it methods available. Unchecked boxes are _work in process_.
 
-                     | API Object         |                    | Methods           | Tested on
----------------------|--------------------|--------------------|-------------------|---------------
+                     | API Object         |                    | Methods           | Web Service Test
+---------------------|--------------------|--------------------|-------------------|----------------------
  :white_check_mark:  | Console            |                    |                   |
-                     |                    | :white_check_mark: | dashboard         | consoledashboard_01/
+                     |                    | :white_check_mark: | dashboard         | console/dashboard_01/
                      |                    | :white_check_mark: | dashboard         | console/dashboard_02/
                      |                    | :white_check_mark: | debug             | console/debug/
  :white_check_mark:  | Cookie             |                    |                   |
@@ -82,28 +82,27 @@ The following list represents the status of each core API objects and it methods
                      |                    | :no_entry:         | lookup            |
                      |                    | :no_entry:         | mode              |
                      |                    | :white_check_mark: | signal            | event/signal_callback/
+ :warning:           | Garbage Collector  |                    |                   |
+                     |                    | :no_entry:         | add               |
+ :warning:           | Memory Handler     |                    |                   |
+                     |                    | :no_entry:         | alloc             |
+                     |                    | :no_entry:         | alloc_z           |
+                     |                    | :no_entry:         | free              |
+                     |                    | :no_entry:         | realloc           |
+ :warning:           | Global Worker      |                    |                   |
+                     |                    | :no_entry:         | get               |
+                     |                    | :no_entry:         | init              |
+                     |                    | :no_entry:         | set               |
+ :warning:           | Log Writer         |                    |                   |
+                     |                    | :no_entry:         | duda_loogger_create |
+                     |                    | :no_entry:         | print             |
+ :warning:           | Parameters         |                    |                   |
+                     |                    | :no_entry:         | count             |
+                     |                    | :no_entry:         | get               |
+                     |                    | :no_entry:         | get_number        |
+                     |                    | :no_entry:         | len               |
 
 
-
-- [ ] Garbage Collector
-  - [ ] add()
-- [ ] Memory Handler
-  - [ ] alloc()
-  - [ ] alloc_z()
-  - [ ] free()
-  - [ ] realloc()
-- [ ] Global Worker
-  - [ ] get()
-  - [ ] init()
-  - [ ] set()
-- [ ] Log Writer
-  - [ ] duda_logger_create()
-  - [ ] print()
-- [ ] Parameters
-  - [ ] count()
-  - [ ] get()
-  - [ ] get_number()
-  - [ ] len()
 - [ ] Query String
   - [ ] cmp()
   - [ ] count()

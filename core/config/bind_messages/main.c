@@ -6,8 +6,8 @@ DUDA_REGISTER("Duda QA", "Unit Test");
 
 void cb_write(duda_request_t *dr)
 {
-    printf("message to STDOUT\n");
-    fflush(stdout);
+    fprintf(stderr, "test to stderr & ");
+    fprintf(stdout, "stdout\n");
 
     response->http_status(dr, 200);
     response->end(dr, NULL);

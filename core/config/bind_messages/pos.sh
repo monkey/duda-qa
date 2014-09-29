@@ -1,2 +1,2 @@
-sleep 4
-cat /tmp/qa.duda.messages | grep "message to STDOUT"
+sleep 1
+cat /tmp/qa.duda.messages | grep "test to stderr & stdout"

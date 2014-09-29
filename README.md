@@ -124,45 +124,42 @@ The following list represents the status of each core API objects and it methods
                      |                    | :no_entry:         | sendfile          |
                      |                    | :no_entry:         | sendfile_range    |
                      |                    | :no_entry:         | wait              |
-
-
-- [ ] Request
-  - [ ] content_length()
-  - [ ] content_type()
-  - [ ] get_data()
-  - [ ] header_cmp()
-  - [ ] header_contains()
-  - [ ] header_get()
-  - [ ] is_data()
-  - [ ] is_delete()
-  - [ ] is_get()
-  - [ ] is_head()
-  - [ ] is_post()
-  - [ ] is_put()
-  - [ ] validate_request()
-  - [ ] validate_socket()
-- [ ] Router
-  - [ ] map()
-  - [ ] root()
-- [ ] Sessions
-  - [ ] create()
-  - [ ] destroy()
-  - [ ] get()
-  - [ ] init()
-  - [ ] isset()
-- [ ] Workers
-  - [ ] pre_loop()
-  - [ ] spawn()
-- [ ] Time handling
-  - [ ] next_hours()
-  - [ ] now()
-  - [ ] tomorrow()
-- [ ] Dthread
-  - [ ] create()
-  - [ ] resume()
-  - [ ] running()
-  - [ ] status()
-  - [ ] yield()
+ :no_entry:          | Request            |                    |                   |
+                     |                    | :no_entry:         | content_length    |
+                     |                    | :no_entry:         | content_type      |
+                     |                    | :no_entry:         | get_data          |
+                     |                    | :no_entry:         | header_cmp        |
+                     |                    | :no_entry:         | header_contains   |
+                     |                    | :no_entry:         | header_get        |
+                     |                    | :no_entry:         | is_data           |
+                     |                    | :no_entry:         | is_delete         |
+                     |                    | :no_entry:         | is_get            |
+                     |                    | :no_entry:         | is_head           |
+                     |                    | :no_entry:         | is_post           |
+                     |                    | :no_entry:         | is_put            |
+                     |                    | :no_entry:         | validate_request  |
+                     |                    | :no_entry:         | validate_socket   |
+ :no_entry:          | Router             |                    |                   |
+                     |                    | :no_entry:         | map               |
+                     |                    | :no_entry:         | root              |
+ :no_entry:          | Sessions           |                    |                   |
+                     |                    | :no_entry:         | create            |
+                     |                    | :no_entry:         | destroy           |
+                     |                    | :no_entry:         | init              |
+                     |                    | :no_entry:         | isset             |
+ :no_entry:          | Workers            |                    |                   |
+                     |                    | :no_entry:         | pre_loop          |
+                     |                    | :no_entry:         | spawn             |
+ :no_entry:          | Time Handling      |                    |                   |
+                     |                    | :no_entry:         | next_hours        |
+                     |                    | :no_entry:         | now               |
+                     |                    | :no_entry:         | tomorrow          |
+ :no_entry:          | Dthread            |                    |                   |
+                     |                    | :no_entry:         | create            |
+                     |                    | :no_entry:         | resume            |
+                     |                    | :no_entry:         | running           |
+                     |                    | :no_entry:         | status            |
+                     |                    | :no_entry:         | yield             |
 
 ## Contact
 

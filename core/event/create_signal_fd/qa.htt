@@ -6,7 +6,7 @@ __GET /qa/send_signal/ $HTTPVER
 __Host: $HOST
 __
 _EXPECT . "HTTP/1.1 200 OK"
-_EXPECT . "ret=0 signal=0"
+_EXPECT . "ret=0"
 _WAIT
 
 _REQ $HOST $PORT

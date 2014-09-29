@@ -60,7 +60,7 @@ void cb_send(duda_request_t *dr)
     ret=event->signal(0xDEADBEEF);
 
     response->http_status(dr, 200);
-    response->printf(dr, "ret=%i signal=%x\n", ret, check);
+    response->printf(dr, "ret=%i\n", ret);
     response->end(dr, NULL);
 }
 

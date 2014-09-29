@@ -46,63 +46,45 @@ inside _/home/foo/stack/_.
 
 The following list represents the status of each core API objects and it methods available. Unchecked boxes are _work in process_.
 
-                     | API Object         | Web Service Test  | Methods       | Comments
----------------------|--------------------|-------------------|---------------|-----------------------|
- :white_check_mark:  | Console            |                   |               |                       |
-                     | :white_check_mark: | dashboard_01      |               | Request redirect      |
-                     | :white_check_mark: |                   | dashboard     |                       |
-                     | :white_check_mark: | dashboard_02      |               | Direct dashboard load |
-                     | :white_check_mark: |                   | dashboard     |                       |
-                     | :white_check_mark: | debug             |               | Write message through debug() method          |
-                     | :white_check_mark: |                   | debug         |                                               |
- :white_check_mark:  | Cookie             |                   |               |                                               |
-                     | :white_check_mark: | ALL               |               | Set cookie, get, compare and destroy          |
-                     | :white_check_mark: |                   | cmp           |                                               |
-                     | :white_check_mark: |                   | destroy       |                                               |
-                     | :white_check_mark: |                   | get           |                                               |
-                     | :white_check_mark: |                   | set           |                                               |
- :white_check_mark:  | Configuration      |                   |               |                                              |
-                     | :white_check_mark: | bind_messages     |               | Write message to stdout and stderr, validate console file |
-                     | :white_check_mark: |                   | bind_messages |      |
-                     | :white_check_mark: | service_name      |               | Alter service name and validate new service URL |
-                     | :white_check_mark: |                   | service_name  |      |
-                     | :white_check_mark: | service_root      |               | Make the service the owner of the server, check new URL |
-                     | :white_check_mark: |                   | service_root  |      |
- :white_check_mark:  | Data               |                   |               |      |
-                     | :white_check_mark: | ALL               |               | Locate file path, override Data path and compose new one |
-                     | :white_check_mark: |                   | get_path      |      |
-                     | :white_check_mark: |                   | locate        |      |
-                     | :white_check_mark: |                   | set_path      |      |
- :white_check_mark:  | File Configuration |                   |               |      |
-                     | :white_check_mark: | ALL               |               | Read configuration file |
-                     | :white_check_mark: |                   | free_conf     |      |
-                     | :white_check_mark: |                   | get_path      |      |
-                     | :white_check_mark: |                   | read_conf     |      |
-                     | :white_check_mark: |                   | read_file     |      |
-                     | :white_check_mark: |                   | section_get   |      |
-                     | :white_check_mark: |                   | section_key   |      |
-                     | :white_check_mark: |                   | set_path      |      |
- :warning:           | Events             |                   |               |      |
-                     | :no_entry:         | ???               | add           |      |
-                     | :white_check_mark: | create_signal_fd  |               | Spawn a worker and set a new listener, trap request and update a global value |
-                     | :white_check_mark: |                   | create_signal_fd |                 |
-                     | :no_entry:         | ???               | delete        |      |
-                     | :white_check_mark: | signal_callback   |               | Create a callback for workers signal and validate further requests |
-                     | :white_check_mark: |                   | duda_event_signal_set_callback |   |
-                     | :white_check_mark: |                   | signal        |      |
-                     | :no_entry:         | ???               | delete        |      |
-                     | :no_entry:         | ???               | lookup        |      |
-                     | :no_entry:         | ???               | mode          |      |
+                     | API Object         |                    | Methods           | Tested on
+---------------------|--------------------|--------------------|-------------------|---------------
+ :white_check_mark:  | Console            |                    |                   |
+                     |                    | :white_check_mark: | dashboard         | consoledashboard_01/
+                     |                    | :white_check_mark: | dashboard         | console/dashboard_02/
+                     |                    | :white_check_mark: | debug             | console/debug/
+ :white_check_mark:  | Cookie             |                    |                   |
+                     |                    | :white_check_mark: | cmp               | cookie/
+                     |                    | :white_check_mark: | destroy           | cookie/
+                     |                    | :white_check_mark: | get               | cookie/
+                     |                    | :white_check_mark: | set               | cookie/
+ :white_check_mark:  | Configuration      |                    |                   |
+                     |                    | :white_check_mark: | bind_messages     | config/bind_messages/
+                     |                    | :white_check_mark: | service_name      | config/service_name/
+                     |                    | :white_check_mark: | service_root      | config/service_root/
+ :white_check_mark:  | Data               |                    |                   |
+                     |                    | :white_check_mark: | get_path          | data/
+                     |                    | :white_check_mark: | locate            | data/
+                     |                    | :white_check_mark: | set_path          | data/
+ :white_check_mark:  | File Configuration |                    |                   |
+                     |                    | :white_check_mark: | free_conf         | fconf/
+                     |                    | :white_check_mark: | get_path          | fconf/
+                     |                    | :white_check_mark: | read_conf         | fconf/
+                     |                    | :white_check_mark: | read_file         | fconf/
+                     |                    | :white_check_mark: | section_get       | fconf/
+                     |                    | :white_check_mark: | section_key       | fconf/
+                     |                    | :white_check_mark: | set_path          | fconf/
+ :warning:           | Events             |                    |                   |
+                     |                    | :no_entry:         | add               |
+                     |                    | :white_check_mark: | create_signal_fd  | event/create_signal_fd/
+                     |                    | :no_entry:         | delete            |
+                     |                    | :white_check_mark: | duda_event_signal_set_callback | event/signal_callback/
+                     |                    | :no_entry:         | delete            |
+                     |                    | :no_entry:         | lookup            |
+                     |                    | :no_entry:         | mode              |
+                     |                    | :white_check_mark: | signal            | event/signal_callback/
 
 
-- [ ] Events
-  - [ ] add()
-  - [x] create_signal_fd()
-  - [ ] delete()
-  - [x] duda_event_signal_set_callback()
-  - [ ] lookup()
-  - [ ] mode()
-  - [x] signal()
+
 - [ ] Garbage Collector
   - [ ] add()
 - [ ] Memory Handler

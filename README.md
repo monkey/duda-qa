@@ -46,27 +46,33 @@ inside _/home/foo/stack/_.
 
 The following list represents the status of each core API objects and it methods available. Unchecked boxes are _work in process_.
 
-                     | Object            | Test          | Methods      | Comments
----------------------|-------------------|---------------|--------------|-----------------------|
- :white_check_mark:  | Console           |               |              |                       |
-                     | :white_check_mark:| dashboard_01  |              | Request redirect      |
-                     | :white_check_mark:|               | dashboard    |                       |
- :white_check_mark:  |                   | dashboard_02  | dashboard    | Direct dashboard load |
- :white_check_mark:  |                   | debug         | debug        | Write message through debug() method           |
- :white_check_mark:  | Cookie            |               |              |                                                |
- :white_check_mark:  |                   | ALL           | cmp, destroy, get, set | Set cookie, get, compare and destroy |
- :white_check_mark:  | Configuration     |               |               |                                               |
- :white_check_mark:  |                   | bind_messages | bind_messages | Write message to stdout and stderr, validate console file |
- :white_check_mark:  |                   | service_name  | service_name  | Alter service name and validate new service URL |
- :white_check_mark:  |                   | service_root  | service_root  | Make the service the owner of the server, check new URL |
- :white_check_mark:  | Data              |               |               |                       |
- :white_check_mark:  |                   | ALL           | get_path, locate, set_path | Locate file path, override Data path and compose new one |
- :white_check_mark:  | File Configuration|               |               |                       |
- :white_check_mark:  |                   | ALL           | free_conf, get_path, read_conf, read_file, section_get, section_key, set_path| Read configuration file |
- :warning:           | Events            |
- :no_entry:          |                   | ???           | add           |                       |
- :white_check_mark:  |                   | create_signal_fd |            | Spawn a worker and set a new listener, trap request and update a global value |
-                     |                   |                  | create_signal_fd |                 |
+                     | Object             | Test          | Methods      | Comments
+---------------------|--------------------|---------------|--------------|-----------------------|
+ :white_check_mark:  | Console            |               |              |                       |
+                     | :white_check_mark: | dashboard_01  |              | Request redirect      |
+                     | :white_check_mark: |               | dashboard    |                       |
+                     | :white_check_mark: | dashboard_02  |              | Direct dashboard load |
+                     | :white_check_mark: |               | dashboard    |                       |
+                     | :white_check_mark  | debug         |              | Write message through debug() method          |
+                     | :white_check_mark  |               | debug        |                                               |
+ :white_check_mark:  | Cookie             |               |              |                                               |
+                     | :white_check_mark: | ALL           |              | Set cookie, get, compare and destroy          |
+                     | :white_check_mark: |               | cmp          |                                               | 
+                     | :white_check_mark: |               | destroy      |                                               |
+                     | :white_check_mark: |               | get          |                                               |
+                     | :white_check_mark: |               | set          |                                               |
+ :white_check_mark:  | Configuration      |               |               |                                               |
+ :white_check_mark:  |                    | bind_messages | bind_messages | Write message to stdout and stderr, validate console file |
+ :white_check_mark:  |                    | service_name  | service_name  | Alter service name and validate new service URL |
+ :white_check_mark:  |                    | service_root  | service_root  | Make the service the owner of the server, check new URL |
+ :white_check_mark:  | Data               |               |               |                       |
+ :white_check_mark:  |                    | ALL           | get_path, locate, set_path | Locate file path, override Data path and compose new one |
+ :white_check_mark:  | File Configuration |               |               |                       |
+ :white_check_mark:  |                    | ALL           | free_conf, get_path, read_conf, read_file, section_get, section_key, set_path| Read configuration file |
+ :warning:           | Events             |
+ :no_entry:          |                    | ???           | add           |                       |
+ :white_check_mark:  |                    | create_signal_fd |            | Spawn a worker and set a new listener, trap request and update a global value |
+                     |                    |                  | create_signal_fd |                 |
 
 
 - [ ] Events

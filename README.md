@@ -46,6 +46,14 @@ inside _/home/foo/stack/_.
 
 The following list represents the status of each core API objects and it methods available. Unchecked boxes are _work in process_.
 
+                     | Object            | Test          | Methods      | Comments
+---------------------|-------------------|---------------|--------------|-----------------------|
+ :white_check_mark:  | Console           |               |              |                       |
+                     |                   | dashboard_01  | dashboard    | Request redirect      |
+                     |                   | dashboard_02  | dashboard    | Direct dashboard load |
+                     |                   | debug         | debug        | Write message through debug() method |
+
+
 - [x] Console
   - [x] dashboard()
   - [x] debug()

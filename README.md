@@ -81,9 +81,9 @@ The following list represents the status of each core API objects and it methods
                      | :white_check_mark: |                   | read_file     |      |
                      | :white_check_mark: |                   | section_get   |      |
                      | :white_check_mark: |                   | section_key   |      |
-                     | :white_check_mark  |                   | set_path      |      |
+                     | :white_check_mark: |                   | set_path      |      |
  :warning:           | Events             |                   |               |      |
-          :          | :no_entry:         | ???               | add           |      |
+                     | :no_entry:         | ???               | add           |      |
                      | :white_check_mark: | create_signal_fd  |               | Spawn a worker and set a new listener, trap request and update a global value |
                      | :white_check_mark: |                   | create_signal_fd |                 |
                      | :no_entry:         | ???               | delete        |      |

@@ -93,9 +93,9 @@ The following list represents the status of each core API objects and it methods
                      |                    | :no_entry:         | get               |
                      |                    | :no_entry:         | init              |
                      |                    | :no_entry:         | set               |
- :no_entry:          | Log Writer         |                    |                   |
-                     |                    | :no_entry:         | duda_loogger_create |
-                     |                    | :no_entry:         | print             |
+ :white_check_mark:  | Log Writer         |                    |                   |
+                     |                    | :white_check_mark: | duda_logger_create | log_writer/
+                     |                    | :white_check_mark: | print             | log_writer/
  :no_entry:          | Parameters         |                    |                   |
                      |                    | :no_entry:         | count             |
                      |                    | :no_entry:         | get               |

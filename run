@@ -21,7 +21,8 @@ CORE_UT = {'console': ['dashboard_01',
            'fconf': None,
            'event': ['signal_callback',
                      'create_signal_fd'
-                 ]
+                 ],
+           'log_writer': None,
             }
 
 # ANSI Colors
@@ -134,7 +135,7 @@ def qa_eval(proc, path):
     else:
         script_failed('HTTP_TEST_FAILED')
 
-    if pre is not None:
+    if pos is not None:
         ret = script_spawn(cpath, './pos.sh')
         if ret == 0:
             script_ok('POS_OK')

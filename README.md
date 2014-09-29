@@ -60,7 +60,9 @@ The following list represents the status of each core API objects and it methods
  :white_check_mark:  |                   | service_root  | service_root  | Make the service the owner of the server, check new URL |
  :white_check_mark:  | Data              |               |               |                       |
  :white_check_mark:  |                   | ALL           | get_path, locate, set_path | Locate file path, override Data path and compose new one |
-
+ :white_check_mark:  | File Configuration|               |               |                       |
+ :white_check_mark:  |                   | ALL           | free_conf, get_path, read_conf, read_file, section_get, section_key, set_path| Read configuration file |
+ 
 
 - [x] File Configuration
   - [x] free_conf()

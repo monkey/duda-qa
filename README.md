@@ -49,7 +49,8 @@ The following list represents the status of each core API objects and it methods
                      | Object            | Test          | Methods      | Comments
 ---------------------|-------------------|---------------|--------------|-----------------------|
  :white_check_mark:  | Console           |               |              |                       |
- :white_check_mark:  |                   | dashboard_01  | dashboard    | Request redirect      |
+                     | :white_check_mark:| dashboard_01  |              | Request redirect      |
+                     | :white_check_mark:|               | dashboard    |                       |
  :white_check_mark:  |                   | dashboard_02  | dashboard    | Direct dashboard load |
  :white_check_mark:  |                   | debug         | debug        | Write message through debug() method           |
  :white_check_mark:  | Cookie            |               |              |                                                |
@@ -62,16 +63,12 @@ The following list represents the status of each core API objects and it methods
  :white_check_mark:  |                   | ALL           | get_path, locate, set_path | Locate file path, override Data path and compose new one |
  :white_check_mark:  | File Configuration|               |               |                       |
  :white_check_mark:  |                   | ALL           | free_conf, get_path, read_conf, read_file, section_get, section_key, set_path| Read configuration file |
- 
+ :warning:           | Events            |
+ :no_entry:          |                   | ???           | add           |                       |
+ :white_check_mark:  |                   | create_signal_fd |            | Spawn a worker and set a new listener, trap request and update a global value |
+                     |                   |                  | create_signal_fd |                 |
 
-- [x] File Configuration
-  - [x] free_conf()
-  - [x] get_path()
-  - [x] read_conf()
-  - [x] read_file()
-  - [x] section_get()
-  - [x] section_key()
-  - [x] set_path()
+
 - [ ] Events
   - [ ] add()
   - [x] create_signal_fd()

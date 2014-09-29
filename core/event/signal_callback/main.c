@@ -24,8 +24,6 @@ void cb_set_one(duda_request_t *dr)
     else {
         response->http_status(dr, 200);
     }
-
-    response->printf(dr, "value=%i\n", val);
     response->end(dr, NULL);
 }
 

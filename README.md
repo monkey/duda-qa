@@ -53,14 +53,15 @@ The following list represents the status of each core API objects and it methods
                      | :white_check_mark: |               | dashboard    |                       |
                      | :white_check_mark: | dashboard_02  |              | Direct dashboard load |
                      | :white_check_mark: |               | dashboard    |                       |
-                     | :white_check_mark  | debug         |              | Write message through debug() method          |
-                     | :white_check_mark  |               | debug        |                                               |
+                     | :white_check_mark: | debug         |              | Write message through debug() method          |
+                     | :white_check_mark: |               | debug        |                                               |
  :white_check_mark:  | Cookie             |               |              |                                               |
                      | :white_check_mark: | ALL           |              | Set cookie, get, compare and destroy          |
                      | :white_check_mark: |               | cmp          |                                               | 
                      | :white_check_mark: |               | destroy      |                                               |
                      | :white_check_mark: |               | get          |                                               |
                      | :white_check_mark: |               | set          |                                               |
+                     | | | | | 
  :white_check_mark:  | Configuration      |               |               |                                               |
  :white_check_mark:  |                    | bind_messages | bind_messages | Write message to stdout and stderr, validate console file |
  :white_check_mark:  |                    | service_name  | service_name  | Alter service name and validate new service URL |

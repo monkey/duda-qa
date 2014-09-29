@@ -8,7 +8,10 @@ void cb_write(duda_request_t *dr)
 {
     fprintf(stderr, "test to stderr & ");
     fprintf(stdout, "stdout\n");
+    fflush(stderr);
+    fflush(stdout);
 
+    msg->warn("message using API");
     response->http_status(dr, 200);
     response->end(dr, NULL);
 }

@@ -49,23 +49,17 @@ The following list represents the status of each core API objects and it methods
                      | Object            | Test          | Methods      | Comments
 ---------------------|-------------------|---------------|--------------|-----------------------|
  :white_check_mark:  | Console           |               |              |                       |
-                     |                   | dashboard_01  | dashboard    | Request redirect      |
-                     |                   | dashboard_02  | dashboard    | Direct dashboard load |
-                     |                   | debug         | debug        | Write message through debug() method |
+ :white_check_mark:  |                   | dashboard_01  | dashboard    | Request redirect      |
+ :white_check_mark:  |                   | dashboard_02  | dashboard    | Direct dashboard load |
+ :white_check_mark:  |                   | debug         | debug        | Write message through debug() method           |
+ :white_check_mark:  | Cookie            |               |              |                                                |
+ :white_check_mark:  |                   | ALL           | cmp, destroy, get, set | Set cookie, get, compare and destroy |
+ :white_check_mark:  | Configuration     |               |               |                                               |
+ :white_check_mark:  |                   | bind_messages | bind_messages | Write message to stdout and stderr, validate console file |
+ :white_check_mark:  |                   | service_name  | service_name  | Alter service name and validate new service URL |
+ :white_check_mark:  |                   | service_root  | service_root  | Make the service the owner of the server, check new URL |
 
 
-- [x] Console
-  - [x] dashboard()
-  - [x] debug()
-- [x] Cookies
-  - [x] cmp()
-  - [x] destroy()
-  - [x] get()
-  - [x] set()
-- [x] Configuration
-  - [x] bind_messages()
-  - [x] service_name()
-  - [x] service_root()
 - [x] Data
   - [x] get_path()
   - [x] locate()

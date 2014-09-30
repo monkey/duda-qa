@@ -1,0 +1,14 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/test/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "alloc OK"
+_EXPECT . "free OK"
+_EXPECT . "alloc_z OK"
+_EXPECT . "realloc OK"
+_WAIT
+END

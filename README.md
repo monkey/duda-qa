@@ -89,11 +89,11 @@ The boxes status means:
                      |                    | :white_check_mark: | signal            | event/signal_callback/
  :white_check_mark:  | Garbage Collector  |                    |                   |
                      |                    | :white_check_mark: | add               | garbage_collector/
- :no_entry:          | Memory Handler     |                    |                   |
-                     |                    | :no_entry:         | alloc             |
-                     |                    | :no_entry:         | alloc_z           |
-                     |                    | :no_entry:         | free              |
-                     |                    | :no_entry:         | realloc           |
+ :white_check_mark:  | Memory Handler     |                    |                   |
+                     |                    | :white_check_mark: | alloc             |
+                     |                    | :white_check_mark: | alloc_z           |
+                     |                    | :white_check_mark: | free              |
+                     |                    | :white_check_mark: | realloc           |
  :no_entry:          | Global Worker      |                    |                   |
                      |                    | :no_entry:         | get               |
                      |                    | :no_entry:         | init              |

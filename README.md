@@ -88,7 +88,7 @@ The boxes status means:
                      |                    | :white_check_mark: | mode              | event/events/
                      |                    | :white_check_mark: | signal            | event/signal_callback/
  :white_check_mark:  | Garbage Collector  |                    |                   |
-                     |                    | :white_check_mark: | add               |
+                     |                    | :white_check_mark: | add               | garbage_collector/
  :no_entry:          | Memory Handler     |                    |                   |
                      |                    | :no_entry:         | alloc             |
                      |                    | :no_entry:         | alloc_z           |

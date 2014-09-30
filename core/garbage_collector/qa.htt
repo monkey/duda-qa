@@ -1,0 +1,11 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/step/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "gc_add=0"
+_WAIT
+END

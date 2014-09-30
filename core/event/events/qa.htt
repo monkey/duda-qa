@@ -1,0 +1,23 @@
+INCLUDE ../../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/step/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "event: write OK"
+_EXPECT . "event: mode OK"
+_EXPECT . "event: delete OK"
+_EXPECT . "event: read OK"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/lookup/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "event_handler=OK"
+_WAIT
+
+END

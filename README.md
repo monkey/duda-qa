@@ -79,14 +79,13 @@ The boxes status means:
                      |                    | :white_check_mark: | section_get       | fconf/
                      |                    | :white_check_mark: | section_key       | fconf/
                      |                    | :white_check_mark: | set_path          | fconf/
- :warning:           | Events             |                    |                   |
-                     |                    | :no_entry:         | add               |
+ :white_check_mark:  | Events             |                    |                   |
+                     |                    | :white_check_mark: | add               | event/events/
                      |                    | :white_check_mark: | create_signal_fd  | event/create_signal_fd/
-                     |                    | :no_entry:         | delete            |
+                     |                    | :white_check_mark: | delete            | event/events/
                      |                    | :white_check_mark: | duda_event_signal_set_callback | event/signal_callback/
-                     |                    | :no_entry:         | delete            |
-                     |                    | :no_entry:         | lookup            |
-                     |                    | :no_entry:         | mode              |
+                     |                    | :white_check_mark: | lookup            | event/events/
+                     |                    | :white_check_mark: | mode              | event/events/
                      |                    | :white_check_mark: | signal            | event/signal_callback/
  :no_entry:          | Garbage Collector  |                    |                   |
                      |                    | :no_entry:         | add               |

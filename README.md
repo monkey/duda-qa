@@ -155,7 +155,7 @@ The boxes status means:
  :no_entry:          | Workers            |                    |                   |
                      |                    | :no_entry:         | pre_loop          |
                      |                    | :no_entry:         | spawn             |
- :white_check_marky: | Time Handling      |                    |                   |
+ :white_check_mark:  | Time Handling      |                    |                   |
                      |                    | :white_check_mark: | next_hours        | time/
                      |                    | :white_check_mark: | now               | time/
                      |                    | :white_check_mark: | tomorrow          | time/

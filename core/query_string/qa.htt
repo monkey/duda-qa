@@ -1,0 +1,26 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/empty/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "count=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/param/?a=1ABC&b=2&c=ABC $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "count=3"
+_EXPECT . "cmp_1=0"
+_EXPECT . "cmp_2=-1"
+_EXPECT . "buf1=ABC"
+_EXPECT . "buf2=\(null\)"
+_EXPECT . "buf3=1ABC"
+_EXPECT . "buf4=\(null\)"
+_EXPECT . "buf5=\(null\)"
+_WAIT
+END

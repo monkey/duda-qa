@@ -106,11 +106,11 @@ The boxes status means:
                      |                    | :warning:          | get               | parameters/
                      |                    | :warning:          | get_number        | parameters/
                      |                    | :warning:          | len               | parameters/
- :no_entry:          | Query String       |                    |                   |
-                     |                    | :no_entry:         | cmp               |
-                     |                    | :no_entry:         | count             |
-                     |                    | :no_entry:         | get               |
-                     |                    | :no_entry:         | get_id            |
+ :white_check_mark:  | Query String       |                    |                   |
+                     |                    | :white_check_mark: | cmp               | query_string/
+                     |                    | :white_check_mark: | count             | query_string/
+                     |                    | :white_check_mark: | get               | query_string/
+                     |                    | :white_check_mark: | get_id            | query_string/
  :no_entry:          | Response           |                    |                   |
                      |                    | :no_entry:         | cont              |
                      |                    | :no_entry:         | end               |

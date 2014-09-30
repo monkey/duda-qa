@@ -26,7 +26,8 @@ CORE_UT = {'console': ['dashboard_01',
            'log_writer': None,
            'garbage_collector': None,
            'memory': None,
-           'global': None
+           'global': None,
+           'query_string': None
             }
 
 # ANSI Colors

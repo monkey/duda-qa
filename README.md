@@ -94,10 +94,10 @@ The boxes status means:
                      |                    | :white_check_mark: | alloc_z           | memory/
                      |                    | :white_check_mark: | free              | memory/
                      |                    | :white_check_mark: | realloc           | memory/
- :no_entry:          | Global Worker      |                    |                   |
-                     |                    | :no_entry:         | get               |
-                     |                    | :no_entry:         | init              |
-                     |                    | :no_entry:         | set               |
+ :white_check_mark:  | Global Worker      |                    |                   |
+                     |                    | :white_check_mark: | get               | global/
+                     |                    | :white_check_mark: | init              | global/
+                     |                    | :white_check_mark: | set               | global/
  :white_check_mark:  | Log Writer         |                    |                   |
                      |                    | :white_check_mark: | duda_logger_create | log_writer/
                      |                    | :white_check_mark: | print             | log_writer/

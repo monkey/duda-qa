@@ -16,7 +16,7 @@ void cb_test(duda_request_t *dr)
     }
     strcpy(buf, "abc");
     response->printf(dr, "alloc OK\n");
-    
+
     /* well, it should not crash */
     mem->free(buf);
     response->printf(dr, "free OK\n");

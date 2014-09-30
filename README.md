@@ -90,10 +90,10 @@ The boxes status means:
  :white_check_mark:  | Garbage Collector  |                    |                   |
                      |                    | :white_check_mark: | add               | garbage_collector/
  :white_check_mark:  | Memory Handler     |                    |                   |
-                     |                    | :white_check_mark: | alloc             |
-                     |                    | :white_check_mark: | alloc_z           |
-                     |                    | :white_check_mark: | free              |
-                     |                    | :white_check_mark: | realloc           |
+                     |                    | :white_check_mark: | alloc             | memory/
+                     |                    | :white_check_mark: | alloc_z           | memory/
+                     |                    | :white_check_mark: | free              | memory/
+                     |                    | :white_check_mark: | realloc           | memory/
  :no_entry:          | Global Worker      |                    |                   |
                      |                    | :no_entry:         | get               |
                      |                    | :no_entry:         | init              |

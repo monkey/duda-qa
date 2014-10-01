@@ -144,9 +144,9 @@ The boxes status means:
                      |                    | :no_entry:         | is_put            |
                      |                    | :no_entry:         | validate_request  |
                      |                    | :no_entry:         | validate_socket   |
- :no_entry:          | Router             |                    |                   |
-                     |                    | :no_entry:         | map               |
-                     |                    | :no_entry:         | root              |
+ :white_check_mark:  | Router             |                    |                   |
+                     |                    | :white_check_mark: | map               | router/
+                     |                    | :white_check_mark: | root              | router/
  :no_entry:          | Sessions           |                    |                   |
                      |                    | :no_entry:         | create            |
                      |                    | :no_entry:         | destroy           |

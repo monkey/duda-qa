@@ -114,7 +114,7 @@ The boxes status means:
  :warning:           | Response           |                    |                   |
                      |                    | :white_check_mark: | cont              | event/events/
                      |                    | :white_check_mark: | end               | event/events/
-                     |                    | :no_entry:         | finalize          |
+                     |                    | :white_check_mark: | finalize          | event/events/
                      |                    | :no_entry:         | flush             |
                      |                    | :no_entry:         | headers_off       |
                      |                    | :no_entry:         | http_content_length |

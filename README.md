@@ -111,24 +111,24 @@ The boxes status means:
                      |                    | :white_check_mark: | count             | query_string/
                      |                    | :white_check_mark: | get               | query_string/
                      |                    | :white_check_mark: | get_id            | query_string/
- :no_entry:          | Response           |                    |                   |
-                     |                    | :no_entry:         | cont              |
-                     |                    | :no_entry:         | end               |
+ :warning:           | Response           |                    |                   |
+                     |                    | :white_check_mark: | cont              | event/events/
+                     |                    | :white_check_mark: | end               | event/events/
                      |                    | :no_entry:         | finalize          |
                      |                    | :no_entry:         | flush             |
                      |                    | :no_entry:         | headers_off       |
                      |                    | :no_entry:         | http_content_length |
                      |                    | :no_entry:         | http_content_type   |
-                     |                    | :no_entry:         | http_header       |
+                     |                    | :white_check_mark: | http_header       | config/service_root/
                      |                    | :no_entry:         | http_header_n     |
-                     |                    | :no_entry:         | http_status       |
+                     |                    | :white_check_mark: | http_status       | event/events/
                      |                    | :no_entry:         | get               |
                      |                    | :no_entry:         | print             |
-                     |                    | :no_entry:         | printf            |
+                     |                    | :white_check_mark: | printf            | event/events/
                      |                    | :no_entry:         | send_headers      |
                      |                    | :no_entry:         | sendfile          |
                      |                    | :no_entry:         | sendfile_range    |
-                     |                    | :no_entry:         | wait              |
+                     |                    | :white_check_mark: | wait              | event/events/
  :no_entry:          | Request            |                    |                   |
                      |                    | :no_entry:         | content_length    |
                      |                    | :no_entry:         | content_type      |

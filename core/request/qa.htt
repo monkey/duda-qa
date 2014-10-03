@@ -63,4 +63,153 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_header_cmp=OK"
 _WAIT
 
+_REQ $HOST 2001
+__GET /qa/header_contains/ $HTTPVER
+__Host: $HOST
+__X-Duda-QA: AA BB CC DD
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_header_contains=OK"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/header_get/ $HTTPVER
+__Host: $HOST
+__X-Duda-QA: AA BB CC DD
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_header_get_ok= AA BB CC DD"
+_EXPECT . "check_header_get_fail=\(null\)"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/is_data_ok/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__
+_-some data
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_data=YES"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/is_data_fail/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_data=NO"
+_WAIT
+
+_REQ $HOST 2001
+__DELETE /qa/is_delete_ok/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_delete=YES"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/is_delete_fail/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_delete=NO"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/is_get_ok/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_get=YES"
+_WAIT
+
+_REQ $HOST 2001
+__HEAD /qa/is_get_fail/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_get=NO"
+_WAIT
+
+_REQ $HOST 2001
+__HEAD /qa/is_head_ok/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_head=YES"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/is_head_fail/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_head=NO"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/is_post_ok/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__
+_-something
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_post=YES"
+_WAIT
+
+_REQ $HOST 2001
+__DELETE /qa/is_post_fail/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_post=NO"
+_WAIT
+
+_REQ $HOST 2001
+__PUT /qa/is_put_ok/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__
+_-something
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_put=YES"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/is_put_fail/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__
+_-something
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_is_put=NO"
+_WAIT
+
+
+_REQ $HOST 2001
+__GET /qa/validate_request_ok/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_validate_request=YES"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/validate_socket_ok/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_validate_socket=YES"
+_WAIT
+
+
+_REQ $HOST 2001
+__GET /qa/validate_socket_fail/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_validate_socket=NO"
+_WAIT
+
 END

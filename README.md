@@ -129,21 +129,21 @@ The boxes status means:
                      |                    | :no_entry:         | sendfile          |
                      |                    | :no_entry:         | sendfile_range    |
                      |                    | :white_check_mark: | wait              | event/events/
- :warning:           | Request            |                    |                   |
+ :white_check_mark:  | Request            |                    |                   |
                      |                    | :white_check_mark: | content_length    | request/
                      |                    | :white_check_mark: | content_type      | request/
                      |                    | :white_check_mark: | get_data          | request/
                      |                    | :white_check_mark: | header_cmp        | request/
-                     |                    | :no_entry:         | header_contains   |
-                     |                    | :no_entry:         | header_get        |
-                     |                    | :no_entry:         | is_data           |
-                     |                    | :no_entry:         | is_delete         |
-                     |                    | :no_entry:         | is_get            |
-                     |                    | :no_entry:         | is_head           |
-                     |                    | :no_entry:         | is_post           |
-                     |                    | :no_entry:         | is_put            |
-                     |                    | :no_entry:         | validate_request  |
-                     |                    | :no_entry:         | validate_socket   |
+                     |                    | :white_check_mark: | header_contains   | request/
+                     |                    | :white_check_mark: | header_get        | request/
+                     |                    | :white_check_mark: | is_data           | request/
+                     |                    | :white_check_mark: | is_delete         | request/
+                     |                    | :white_check_mark: | is_get            | request/
+                     |                    | :white_check_mark: | is_head           | request/
+                     |                    | :white_check_mark: | is_post           | request/
+                     |                    | :white_check_mark: | is_put            | request/
+                     |                    | :white_check_mark: | validate_request  | request/
+                     |                    | :white_check_mark: | validate_socket   | request/
  :white_check_mark:  | Router             |                    |                   |
                      |                    | :white_check_mark: | map               | router/
                      |                    | :white_check_mark: | root              | router/

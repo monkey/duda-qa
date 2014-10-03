@@ -1,0 +1,66 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST 2001
+__GET /qa/test/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__Content-Type: text/plain
+__
+_-abcdefg
+_EXPECT . "HTTP/1.1 400 Bad Request"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/test2/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__Content-Type: text/plain
+__
+_-abcdefg
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_content_length=7"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/content_type_ok/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__Content-Type: application/json
+__
+_-{'key': 'value'}
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_content_type=json"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/content_type_fail/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__
+_-{'key': 'value'}
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_content_type=EMPTY"
+_WAIT
+
+_REQ $HOST 2001
+__POST /qa/get_data/ $HTTPVER
+__Host: $HOST
+__Content-Length: AUTO
+__Content-Type: application/json
+__
+_-{'key': 'value'}
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_data={'key': 'value'}"
+_WAIT
+
+_REQ $HOST 2001
+__GET /qa/header_cmp/ $HTTPVER
+__Host: $HOST
+__X-Duda-QA: TEST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_header_cmp=OK"
+_WAIT
+
+END

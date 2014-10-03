@@ -129,11 +129,11 @@ The boxes status means:
                      |                    | :no_entry:         | sendfile          |
                      |                    | :no_entry:         | sendfile_range    |
                      |                    | :white_check_mark: | wait              | event/events/
- :no_entry:          | Request            |                    |                   |
-                     |                    | :no_entry:         | content_length    |
-                     |                    | :no_entry:         | content_type      |
-                     |                    | :no_entry:         | get_data          |
-                     |                    | :no_entry:         | header_cmp        |
+ :warning:           | Request            |                    |                   |
+                     |                    | :white_check_mark: | content_length    | request/
+                     |                    | :white_check_mark: | content_type      | request/
+                     |                    | :white_check_mark: | get_data          | request/
+                     |                    | :white_check_mark: | header_cmp        | request/
                      |                    | :no_entry:         | header_contains   |
                      |                    | :no_entry:         | header_get        |
                      |                    | :no_entry:         | is_data           |

@@ -1,7 +1,7 @@
 INCLUDE ../../setup/httest.conf
 
 CLIENT
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/test/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -11,7 +11,7 @@ _-abcdefg
 _EXPECT . "HTTP/1.1 400 Bad Request"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/test2/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -22,7 +22,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_content_length=7"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/content_type_ok/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -33,7 +33,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_content_type=json"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/content_type_fail/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -43,7 +43,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_content_type=EMPTY"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/get_data/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -54,7 +54,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_data={'key': 'value'}"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/header_cmp/ $HTTPVER
 __Host: $HOST
 __X-Duda-QA: TEST
@@ -63,7 +63,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_header_cmp=OK"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/header_contains/ $HTTPVER
 __Host: $HOST
 __X-Duda-QA: AA BB CC DD
@@ -72,7 +72,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_header_contains=OK"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/header_get/ $HTTPVER
 __Host: $HOST
 __X-Duda-QA: AA BB CC DD
@@ -82,7 +82,7 @@ _EXPECT . "check_header_get_ok= AA BB CC DD"
 _EXPECT . "check_header_get_fail=\(null\)"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/is_data_ok/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -92,7 +92,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_data=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/is_data_fail/ $HTTPVER
 __Host: $HOST
 __
@@ -100,7 +100,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_data=NO"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __DELETE /qa/is_delete_ok/ $HTTPVER
 __Host: $HOST
 __
@@ -108,7 +108,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_delete=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/is_delete_fail/ $HTTPVER
 __Host: $HOST
 __
@@ -116,7 +116,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_delete=NO"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/is_get_ok/ $HTTPVER
 __Host: $HOST
 __
@@ -124,7 +124,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_get=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __HEAD /qa/is_get_fail/ $HTTPVER
 __Host: $HOST
 __
@@ -132,7 +132,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_get=NO"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __HEAD /qa/is_head_ok/ $HTTPVER
 __Host: $HOST
 __
@@ -140,7 +140,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_head=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/is_head_fail/ $HTTPVER
 __Host: $HOST
 __
@@ -148,7 +148,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_head=NO"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/is_post_ok/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -158,7 +158,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_post=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __DELETE /qa/is_post_fail/ $HTTPVER
 __Host: $HOST
 __
@@ -166,7 +166,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_post=NO"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __PUT /qa/is_put_ok/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -176,7 +176,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_is_put=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __POST /qa/is_put_fail/ $HTTPVER
 __Host: $HOST
 __Content-Length: AUTO
@@ -187,7 +187,7 @@ _EXPECT . "check_is_put=NO"
 _WAIT
 
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/validate_request_ok/ $HTTPVER
 __Host: $HOST
 __
@@ -195,7 +195,7 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "check_validate_request=YES"
 _WAIT
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/validate_socket_ok/ $HTTPVER
 __Host: $HOST
 __
@@ -204,7 +204,7 @@ _EXPECT . "check_validate_socket=YES"
 _WAIT
 
 
-_REQ $HOST 2001
+_REQ $HOST $PORT
 __GET /qa/validate_socket_fail/ $HTTPVER
 __Host: $HOST
 __

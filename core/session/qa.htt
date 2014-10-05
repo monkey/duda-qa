@@ -1,0 +1,69 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_AUTO_COOKIE on
+
+_REQ $HOST $PORT
+__GET /qa/get/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "session_get='\(null\)'"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/create/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Set-Cookie: DUDA_SESSION="
+_EXPECT . "session_create=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/get/ $HTTPVER
+__Host: $HOST
+__Cookie: AUTO
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "session_get='Duda I/O'"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/isset_ok/ $HTTPVER
+__Host: $HOST
+__Cookie: AUTO
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "session_isset_ok=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/isset_fail/ $HTTPVER
+__Host: $HOST
+__Cookie: AUTO
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "session_isset_fail=-1"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/destroy/ $HTTPVER
+__Host: $HOST
+__Cookie: AUTO
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Set-Cookie: DUDA_SESSION=deleted; path=/; expires"
+_EXPECT . "session_destroy=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/get/ $HTTPVER
+__Host: $HOST
+__Cookie: AUTO
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "session_get='\(null\)'"
+_WAIT
+
+END

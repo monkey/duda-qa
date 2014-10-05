@@ -147,11 +147,12 @@ The boxes status means:
  :white_check_mark:  | Router             |                    |                   |
                      |                    | :white_check_mark: | map               | router/
                      |                    | :white_check_mark: | root              | router/
- :no_entry:          | Sessions           |                    |                   |
-                     |                    | :no_entry:         | create            |
-                     |                    | :no_entry:         | destroy           |
-                     |                    | :no_entry:         | init              |
-                     |                    | :no_entry:         | isset             |
+ :white_check_mark:  | Sessions           |                    |                   |
+                     |                    | :white_check_mark: | create            | session/
+                     |                    | :white_check_mark: | destroy           | session/
+                     |                    | :white_check_mark: | get               | session/
+                     |                    | :white_check_mark: | init              | session/
+                     |                    | :white_check_mark: | isset             | session/
  :no_entry:          | Workers            |                    |                   |
                      |                    | :no_entry:         | pre_loop          |
                      |                    | :no_entry:         | spawn             |

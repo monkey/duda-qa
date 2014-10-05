@@ -19,7 +19,6 @@ void consumer(void *data)
     duda_request_t *dr = bdl->dr;
 
     response->http_status(dr, 200);
-
     response->printf(dr, "check_status_consumer=%i\n", dthread->status(cid));
     response->printf(dr, "check_status_producer=%i\n", dthread->status(pid));
     response->printf(dr, "check_running=%i (cid=%i)\n", dthread->running(), cid);
@@ -35,6 +34,9 @@ void consumer(void *data)
         response->printf(dr, "fib=%d\n", *n);
         mem->free(n);
     }
+
+    dthread->yield();
+    response->printf(dr, "check_yield=OK\n");
     response->end(dr, NULL);
 }
 
@@ -75,6 +77,11 @@ void cb_test(duda_request_t *dr)
     dthread->chan_set_sender(chan, pid);
     dthread->chan_set_receiver(chan, cid);
     dthread->resume(cid);
+
+    /* second resume for CID just to remove the yield set on the consumer */
+    dthread->resume(cid);
+
+
     dthread->chan_free(chan);
     mem->free(bdl);
 }

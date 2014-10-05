@@ -160,10 +160,10 @@ The boxes status means:
                      |                    | :white_check_mark: | next_hours        | time/
                      |                    | :white_check_mark: | now               | time/
                      |                    | :white_check_mark: | tomorrow          | time/
- :warning:           | Dthread            |                    |                   |
+ :white_check_mark:  | Dthread            |                    |                   |
                      |                    | :white_check_mark: | create            | dthread/
                      |                    | :white_check_mark: | status            | dthread/
-                     |                    | :warning:          | yield             |
+                     |                    | :white_check_mark: | yield             | dthread/
                      |                    | :white_check_mark: | resume            | dthread/
                      |                    | :white_check_mark: | running           | dthread/
                      |                    | :white_check_mark: | chan_create       | dthread/

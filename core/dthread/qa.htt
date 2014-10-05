@@ -31,5 +31,6 @@ _EXPECT . "fib=1597"
 _EXPECT . "fib=2584"
 _EXPECT . "fib=4181"
 _EXPECT . "fib=6765"
+_EXPECT . "check_yield=OK"
 _WAIT
 END

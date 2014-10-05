@@ -47,9 +47,9 @@ inside _/home/foo/stack/_.
 The following table represents the status of each core API objects unit test and its methods available.
 The boxes status means:
 
-- :white_check_mark: fully implemented and functional
-- :warning:  work in process
-- :no_entry: not yet implemented
+:white_check_mark: fully implemented
+:warning: work in process
+:no_entry: not yet implemented
 
 
                      | API Object         |                    | Methods           | Web Service Test

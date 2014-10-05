@@ -115,8 +115,8 @@ The boxes status means:
                      |                    | :white_check_mark: | cont              | event/events/
                      |                    | :white_check_mark: | end               | event/events/
                      |                    | :white_check_mark: | finalize          | event/events/
-                     |                    | :no_entry:         | flush             |
-                     |                    | :no_entry:         | headers_off       |
+                     |                    | :warning:          | flush             |
+                     |                    | :white_check_mark: | headers_off       | response/
                      |                    | :white_check_mark: | http_content_length | response/
                      |                    | :white_check_mark: | http_content_type   | response/
                      |                    | :white_check_mark: | http_header       | config/service_root/
@@ -124,9 +124,9 @@ The boxes status means:
                      |                    | :white_check_mark: | http_status       | event/events/
                      |                    | :white_check_mark: | print             | response/
                      |                    | :white_check_mark: | printf            | event/events/
-                     |                    | :no_entry:         | send_headers      |
-                     |                    | :no_entry:         | sendfile          |
-                     |                    | :no_entry:         | sendfile_range    |
+                     |                    | :warning:          | send_headers      |
+                     |                    | :white_check_mark: | sendfile          | response/
+                     |                    | :white_check_mark: | sendfile_range    | response/
                      |                    | :white_check_mark: | wait              | event/events/
  :white_check_mark:  | Request            |                    |                   |
                      |                    | :white_check_mark: | content_length    | request/

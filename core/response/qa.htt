@@ -33,4 +33,40 @@ _EXPECT . "HTTP/1.1 200 OK"
 _EXPECT . "PRINT OK"
 _WAIT
 
+_REQ $HOST $PORT
+__GET /qa/headers_off/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/5.0 200 OK"
+_EXPECT . "Content-Length: 3"
+_EXPECT . "OK"
+_WAIT
+
+#_REQ $HOST $PORT
+#__GET /qa/send_headers/ $HTTPVER
+#__Host: $HOST
+#__
+#_EXPECT . "HTTP/5.0 200 OK"
+#_EXPECT . "Content-Length: 3"
+#_EXPECT . "OK"
+#_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/send_file/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Content-Length: "
+_EXPECT . "DISTRIB_ID="
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/send_file_range/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Content-Length: 5"
+_EXPECT . "IS<<<"
+_WAIT
+
 END

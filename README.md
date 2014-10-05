@@ -117,13 +117,12 @@ The boxes status means:
                      |                    | :white_check_mark: | finalize          | event/events/
                      |                    | :no_entry:         | flush             |
                      |                    | :no_entry:         | headers_off       |
-                     |                    | :no_entry:         | http_content_length |
-                     |                    | :no_entry:         | http_content_type   |
+                     |                    | :white_check_mark: | http_content_length | response/
+                     |                    | :white_check_mark: | http_content_type   | response/
                      |                    | :white_check_mark: | http_header       | config/service_root/
-                     |                    | :no_entry:         | http_header_n     |
+                     |                    | :white_check_mark: | http_header_n     | response/
                      |                    | :white_check_mark: | http_status       | event/events/
-                     |                    | :no_entry:         | get               |
-                     |                    | :no_entry:         | print             |
+                     |                    | :white_check_mark: | print             | response/
                      |                    | :white_check_mark: | printf            | event/events/
                      |                    | :no_entry:         | send_headers      |
                      |                    | :no_entry:         | sendfile          |

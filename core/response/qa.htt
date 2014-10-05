@@ -1,0 +1,36 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/http_content_type/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Content-Type: image/jpeg"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/http_content_length/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "Content-Length: 0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/http_header_n/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "X-Duda: OK"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/print/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "PRINT OK"
+_WAIT
+
+END

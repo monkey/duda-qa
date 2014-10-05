@@ -1,0 +1,12 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/test/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_worker=1"
+_EXPECT . "check_pre_loop=1"
+_WAIT
+END

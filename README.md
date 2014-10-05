@@ -153,9 +153,9 @@ The boxes status means:
                      |                    | :white_check_mark: | get               | session/
                      |                    | :white_check_mark: | init              | session/
                      |                    | :white_check_mark: | isset             | session/
- :no_entry:          | Workers            |                    |                   |
-                     |                    | :no_entry:         | pre_loop          |
-                     |                    | :no_entry:         | spawn             |
+ :white_check_mark:  | Workers            |                    |                   |
+                     |                    | :white_check_mark: | pre_loop          |
+                     |                    | :white_check_mark: | spawn             |
  :white_check_mark:  | Time Handling      |                    |                   |
                      |                    | :white_check_mark: | next_hours        | time/
                      |                    | :white_check_mark: | now               | time/

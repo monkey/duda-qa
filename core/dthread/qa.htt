@@ -1,0 +1,35 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/test/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "check_status_consumer=2"
+_EXPECT . "check_status_producer=1"
+_EXPECT . "check_running=0 \(cid=0\)"
+_EXPECT . "check_get_sender=1 \(pid=1\)"
+_EXPECT . "check_get_receiver=0 \(cid=0\)"
+_EXPECT . "fib=1"
+_EXPECT . "fib=1"
+_EXPECT . "fib=2"
+_EXPECT . "fib=3"
+_EXPECT . "fib=5"
+_EXPECT . "fib=8"
+_EXPECT . "fib=13"
+_EXPECT . "fib=21"
+_EXPECT . "fib=34"
+_EXPECT . "fib=55"
+_EXPECT . "fib=89"
+_EXPECT . "fib=144"
+_EXPECT . "fib=233"
+_EXPECT . "fib=377"
+_EXPECT . "fib=610"
+_EXPECT . "fib=987"
+_EXPECT . "fib=1597"
+_EXPECT . "fib=2584"
+_EXPECT . "fib=4181"
+_EXPECT . "fib=6765"
+_WAIT
+END

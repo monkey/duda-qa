@@ -160,12 +160,22 @@ The boxes status means:
                      |                    | :white_check_mark: | next_hours        | time/
                      |                    | :white_check_mark: | now               | time/
                      |                    | :white_check_mark: | tomorrow          | time/
- :no_entry:          | Dthread            |                    |                   |
-                     |                    | :no_entry:         | create            |
-                     |                    | :no_entry:         | resume            |
-                     |                    | :no_entry:         | running           |
-                     |                    | :no_entry:         | status            |
-                     |                    | :no_entry:         | yield             |
+ :warning:           | Dthread            |                    |                   |
+                     |                    | :white_check_mark: | create            | dthread/
+                     |                    | :white_check_mark: | status            | dthread/
+                     |                    | :warning:          | yield             |
+                     |                    | :white_check_mark: | resume            | dthread/
+                     |                    | :white_check_mark: | running           | dthread/
+                     |                    | :white_check_mark: | chan_create       | dthread/
+                     |                    | :white_check_mark: | chan_free         | dthread/
+                     |                    | :white_check_mark: | chan_get_sender   | dthread/
+                     |                    | :white_check_mark: | chan_set_sender   | dthread/
+                     |                    | :white_check_mark: | chan_get_receiver | dthread/
+                     |                    | :white_check_mark: | chan_set_receiver | dthread/
+                     |                    | :white_check_mark: | chan_done         | dthread/
+                     |                    | :white_check_mark: | chan_end          | dthread/
+                     |                    | :white_check_mark: | chan_send         | dthread/
+                     |                    | :white_check_mark: | chan_recv         | dthread/
 
 ## Contact
 

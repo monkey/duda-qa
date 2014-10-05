@@ -1,0 +1,7 @@
+NAME    = qa
+CC      = gcc
+CFLAGS  = -g -Wall
+LDFLAGS =
+DEFS    =
+INCDIR  =
+OBJECTS = main.o

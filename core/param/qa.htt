@@ -1,0 +1,22 @@
+INCLUDE ../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/test/aa/monkey/bb/12345/xx/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "name ='monkey'"
+_EXPECT . "id=12345 ret=0"
+_WAIT
+
+_REQ $HOST $PORT
+__GET /qa/test/aa/monkey hex%24%24%20abc/bb/%31%32%33%34%35/xx/ $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "name ='monkey hex\\$\\$ abc'"
+_EXPECT . "id=12345 ret=0"
+_WAIT
+
+END

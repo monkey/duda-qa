@@ -24,6 +24,7 @@ CORE_UT = {'console': ['dashboard_01',
                      'events'
                  ],
            'log_writer': None,
+           'param': None,
            'garbage_collector': None,
            'memory': None,
            'global': None,

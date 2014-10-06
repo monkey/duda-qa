@@ -101,11 +101,9 @@ The boxes status means:
  :white_check_mark:  | Log Writer         |                    |                   |
                      |                    | :white_check_mark: | duda_logger_create | log_writer/
                      |                    | :white_check_mark: | print             | log_writer/
- :warning:           | Parameters         |                    |                   |
-                     |                    | :warning:          | count             | parameters/
-                     |                    | :warning:          | get               | parameters/
-                     |                    | :warning:          | get_number        | parameters/
-                     |                    | :warning:          | len               | parameters/
+ :white_check_mark:  | Parameters         |                    |                   |
+                     |                    | :white_check_mark: | get               | param/
+                     |                    | :white_check_mark: | get_number        | param/
  :white_check_mark:  | Query String       |                    |                   |
                      |                    | :white_check_mark: | cmp               | query_string/
                      |                    | :white_check_mark: | count             | query_string/

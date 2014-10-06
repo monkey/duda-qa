@@ -6,8 +6,8 @@ DUDA_REGISTER("Duda QA", "Unit Test");
 
 void cb_write(duda_request_t *dr)
 {
-    fprintf(stderr, "test to stderr & ");
-    fprintf(stdout, "stdout\n");
+    fprintf(stderr, "test to stderr\n");
+    fprintf(stdout, "test to stdout\n");
     fflush(stderr);
     fflush(stdout);
 

@@ -87,6 +87,13 @@ The boxes status means:
                      |                    | :white_check_mark: | lookup            | event/events/
                      |                    | :white_check_mark: | mode              | event/events/
                      |                    | :white_check_mark: | signal            | event/signal_callback/
+                     |                    | :white_check_mark: | loop_create       | event/loop/
+                     |                    | :white_check_mark: | loop_add          | event/loop/
+                     |                    | :white_check_mark: | loop_delete       | event/loop/
+                     |                    | :white_check_mark: | loop_timeout_create | event/loop/
+                     |                    | :white_check_mark: | loop_channel_create | event/loop/
+                     |                    | :white_check_mark: | loop_wait         | event/loop/
+                     |                    | :white_check_mark: | loop_backend      | event/loop/
  :white_check_mark:  | Garbage Collector  |                    |                   |
                      |                    | :white_check_mark: | add               | garbage_collector/
  :white_check_mark:  | Memory Handler     |                    |                   |

@@ -1,0 +1,20 @@
+INCLUDE ../../../setup/httest.conf
+
+CLIENT
+_REQ $HOST $PORT
+__GET /qa/test $HTTPVER
+__Host: $HOST
+__
+_EXPECT . "HTTP/1.1 200 OK"
+_EXPECT . "status_loop_create=0"
+_EXPECT . "status_timeout=0"
+_EXPECT . "status_channel_create=0"
+_EXPECT . "status_channel_rw=0"
+_EXPECT . "status_add=0"
+_EXPECT . "status_delete=0"
+_EXPECT . "status_check_timeout=0"
+_EXPECT . "status_check_ch_w=0"
+_EXPECT . "status_check_ch_r=0"
+_EXPECT . "status_backend=epoll"
+_WAIT
+END

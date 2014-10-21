@@ -21,7 +21,8 @@ CORE_UT = {'console': ['dashboard_01',
            'fconf': None,
            'event': ['signal_callback',
                      'create_signal_fd',
-                     'events'
+                     'events',
+                     'loop'
                  ],
            'log_writer': None,
            'param': None,
@@ -114,6 +115,10 @@ def http_ping_wait():
 
     return -1
 
+def check_tcp_port():
+    ret = subprocess.call('curl -i -s -o /dev/null http://localhost:9897', shell=True)
+    print ret
+
 # Evaluate a running service with it test scripts
 def qa_eval(proc, path):
     pre = None
@@ -156,6 +161,9 @@ def qa_eval(proc, path):
             script_failed('POS_FAILED')
 
     os.chdir(cpath)
+
+
+#print check_tcp_port()
 
 # Run the tests
 for section in CORE_UT:
